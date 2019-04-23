@@ -1,0 +1,368 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Nti_Website.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+     <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/main.css"/>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <script src="js/custom.js"></script>
+
+
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+   
+
+<!-- jQuery Modal -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+
+           
+            <header class="site-header">
+    <div class="header-bar">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-10 col-lg-2 order-lg-1">
+                    <div class="site-branding">
+                        <div class="site-title">
+                            <a href="index.aspx"><img src="images/s.svg" alt="logo"></a>
+                            <a class="navbar-brand page-scroll" href="#page-top"></a>
+                             
+                        </div><!-- .site-title -->
+                    </div><!-- .site-branding -->
+                </div><!-- .col -->
+
+                <div class="col-2 col-lg-7 order-3 order-lg-2">
+                    <nav class="site-navigation">
+                        <div class="hamburger-menu d-lg-none">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+
+                        </div><!-- .hamburger-menu -->
+
+                        <ul>
+                            <li><a href="index.aspx">Start</a></li>
+                            <li><a href="Kategorier.aspx">Kategorier</a></li>
+                            <li><a href="Regler.aspx">Regler</a></li>
+                            <li><a href="Anmalan.aspx">Anmälan</a></li>
+                            <li><a href="Biljeter.aspx">Biljeter</a></li>
+                            <li><a href="Projects.aspx">Nominerade</a></li>
+                            
+                        </ul>
+                    </nav><!-- .site-navigation -->
+                </div><!-- .col -->
+
+                <div class="col-lg-3 d-none d-lg-block order-2 order-lg-3">
+                <div class="buy-tickets">
+
+
+                 <asp:Panel runat="server" ID="pnl1">
+                                         <!-- Link to open the modal -->
+             <p><a  class="btn gradient-bg" id="showhide" onclick="showhide()" >Inloggning</a></p>
+
+                 </asp:Panel>
+
+
+
+                    <asp:Panel runat="server" ID="pnl2">
+                         <asp:Label ID="wlc" runat="server" CssClass="btn gradient-bg"></asp:Label>
+
+                        <div style="margin:10px 50px 10px 10px">
+                             <asp:Button ID="dash" runat="server" Text="Dashboard" Visible="false" OnClick="dash_Click" CssClass="btn gradient-bg" />
+                        </div>
+                       
+                    </asp:Panel>
+                   
+
+        
+  
+      <div style="display:none">
+           <asp:Button ID="btna" runat="server" OnClick="btna_Click" UseSubmitBehavior="false"/>
+      </div> 
+                      </div><!-- .Log In -->
+                </div><!-- .col -->
+            </div><!-- .row -->
+                        <div id="login_content" class="CNT_IN" style="float:right">
+                        <p> <b>Användarnamn:</b><asp:TextBox  CssClass="desgin" TextMode="SingleLine" OnFocus="this.style.borderColor='#9a24c1'" OnBlur="this.style.borderColor='black'"  ID="usr_box" runat="server" placeholder=" Username"></asp:TextBox></p>
+  <p><b>Lösenord:</b>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<asp:TextBox  OnFocus="this.style.borderColor='#9a24c1'" OnBlur="this.style.borderColor='black'" TextMode="Password"  CssClass="desgin" ID="pass_box" runat="server" placeholder=" Password"></asp:TextBox></p>
+ <p><input type="button" value="Logga in" class="Logbtn gradient-bg" onclick="Loginbtn()" 
+      runat="server" id="btin"/></p>
+                    </div>
+        </div><!-- .container-fluid -->
+    </div><!-- .header-bar -->
+
+    <div class="swiper-container hero-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" data-date="2019/6/03" style="background-image:url('https://www.ntigymnasiet.se/wp-content/uploads/2018/07/makerspace_erik_1980_1320.jpg');">
+                 <div class="color-overlay"></div>
+                <div class="hero-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col flex flex-column justify-content-center">
+                                <div class="entry-header">
+                                    <div class="countdown flex align-items-center">
+                                        <div class="countdown-holder flex align-items-baseline">
+                                            <span class="dday"></span>
+                                            <label>Dagar</label>
+                                        </div><!-- .countdown-holder -->
+
+                                        <div class="countdown-holder flex align-items-baseline">
+                                            <span class="dhour"></span>
+                                            <label>Timmar</label>
+                                        </div><!-- .countdown-holder -->
+
+                                        <div class="countdown-holder flex align-items-baseline">
+                                            <span class="dmin"></span>
+                                            <label>Minuter</label>
+                                        </div><!-- .countdown-holder -->
+
+                                        <div class="countdown-holder flex align-items-baseline">
+                                            <span class="dsec"></span>
+                                            <label>Sekunder</label>
+                                        </div><!-- .countdown-holder -->
+                                    </div><!-- .countdown -->
+
+                                    <h2 class="entry-title">Tiden som är kvar till <br><span style="text-decoration:underline">NTIG Awards 2019!</span></h2>
+                                </div><!--- .entry-header -->
+
+                                <div class="entry-footer">
+                                    <a class="btn gradient-bg" href="Projects.aspx"> Se Projekt</a>
+                                </div><!-- .entry-footer" -->
+                            </div><!-- .col -->
+                        </div><!-- .container -->
+                    </div><!-- .hero-content -->
+                </div><!-- .swiper-slide -->
+            </div><!-- .swiper-wrapper -->
+
+            <div class="swiper-slide" data-date="2019/6/03" style="background: url('images/header-bg.jpg') no-repeat">
+                <div class="hero-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col flex flex-column justify-content-center">
+                                <div class="entry-header">
+                                    <div class="countdown flex align-items-center">
+                                        <div class="countdown-holder flex align-items-baseline">
+                                            <span class="dday"></span>
+                                            <label>Days</label>
+                                        </div><!-- .countdown-holder -->
+
+                                        <div class="countdown-holder flex align-items-baseline">
+                                            <span class="dhour"></span>
+                                            <label>Hours</label>
+                                        </div><!-- .countdown-holder -->
+
+                                        <div class="countdown-holder flex align-items-baseline">
+                                            <span class="dmin"></span>
+                                            <label>Minutes</label>
+                                        </div><!-- .countdown-holder -->
+
+                                        <div class="countdown-holder flex align-items-baseline">
+                                            <span class="dsec"></span>
+                                            <label>Seconds</label>
+                                        </div><!-- .countdown-holder -->
+                                    </div><!-- .countdown -->
+
+                                    <h2 class="entry-title">2 We have the best events. <br>Get your tiket now!</h2>
+                                </div><!--- .entry-header -->
+
+                                <div class="entry-footer">
+                                    <a class="btn gradient-bg" href="#">Order here</a>
+                                </div><!-- .entry-footer" -->
+                            </div><!-- .col -->
+                        </div><!-- .container -->
+                    </div><!-- .hero-content -->
+                </div><!-- .swiper-slide -->
+            </div><!-- .swiper-wrapper -->
+
+            <div class="swiper-slide" data-date="2019/6/03" style="background: url('images/header-bg.jpg') no-repeat">
+                <div class="hero-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col flex flex-column justify-content-center">
+                                <div class="entry-header">
+                                    <div class="countdown flex align-items-center">
+                                        <div class="countdown-holder flex align-items-baseline">
+                                            <span class="dday"></span>
+                                            <label>Days</label>
+                                        </div><!-- .countdown-holder -->
+
+                                        <div class="countdown-holder flex align-items-baseline">
+                                            <span class="dhour"></span>
+                                            <label>Hours</label>
+                                        </div><!-- .countdown-holder -->
+
+                                        <div class="countdown-holder flex align-items-baseline">
+                                            <span class="dmin"></span>
+                                            <label>Minutes</label>
+                                        </div><!-- .countdown-holder -->
+
+                                        <div class="countdown-holder flex align-items-baseline">
+                                            <span class="dsec"></span>
+                                            <label>Seconds</label>
+                                        </div><!-- .countdown-holder -->
+                                    </div><!-- .countdown -->
+
+                                    <h2 class="entry-title">3 We have the best events. <br>Get your tiket now!</h2>
+                                </div><!--- .entry-header -->
+
+                                <div class="entry-footer">
+                                    <a class="btn gradient-bg" href="#">Order here</a>
+                                </div><!-- .entry-footer" -->
+                            </div><!-- .col -->
+                        </div><!-- .container -->
+                    </div><!-- .hero-content -->
+                </div><!-- .swiper-slide -->
+            </div><!-- .swiper-wrapper -->
+        </div>
+
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- Add Arrows -->
+        <div class="swiper-button-next flex justify-content-center align-items-center">
+            <span><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1171 960q0 13-10 23l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23z"/></svg></span>
+        </div>
+
+        <div class="swiper-button-prev flex justify-content-center align-items-center">
+            <span><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1203 544q0 13-10 23l-393 393 393 393q10 10 10 23t-10 23l-50 50q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l50 50q10 10 10 23z"/></svg></span>
+        </div>
+    </div><!-- .swiper-container -->
+</header><!-- .site-header -->
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+             
+      <footer class="site-footer">
+               
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-12">
+                
+                <figure class="footer-logo">
+                    <a href="index.aspx"><img src="images/fs.svg" alt="logo"></a>
+                </figure>
+
+                <nav class="footer-navigation">
+                    <ul class="flex flex-wrap justify-content-center align-items-center">
+                   <li><a href="index.aspx">Start</a></li>
+                            <li><a href="Kategorier.aspx">Kategorier</a></li>
+                            <li><a href="Regler.aspx">Regler</a></li>
+                            <li><a href="Anmalan.aspx">Anmälan</a></li>
+                            <li><a href="Biljeter.aspx">Biljeter</a></li>
+                            <li><a href="Projects.aspx">Nominerade</a></li>
+                    </ul>
+                </nav>
+
+            
+
+               <div id="landing-content">
+
+                    <section class="slider"> 
+     
+        <img src="images/layer_2.png" alt="image-3">
+         </section>
+                   <div class="copy">
+                       Copyright &copy;<script>document.write(new Date().getFullYear());</script>  rights reserved |<span style="color:rebeccapurple">NTI-HELSINGBORG </span>   
+ 
+                   </div>
+                       
+
+
+            
+                
+                <div class="footer-social-holder">
+		   <a href="https://www.facebook.com/ntihelsingborg/" target="_blank">Facebook</a>
+		   <a href="https://www.youtube.com/channel/UCf7DmB9NKTJ86MOn4sPON3w/featured" target="_blank">Youtube</a>
+				</div>
+                 
+            </div>
+        </div>
+    </div>
+    </div>
+         
+ 
+       
+</footer>
+
+<div class="back-to-top flex justify-content-center align-items-center">
+    <span><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1395 1184q0 13-10 23l-50 50q-10 10-23 10t-23-10l-393-393-393 393q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l466 466q10 10 10 23z"/></svg></span>
+</div>
+        </div>
+    </form>
+    
+
+    <script type='text/javascript' src='js/jquery.js'></script>
+<script type='text/javascript' src='js/masonry.pkgd.min.js'></script>
+<script type='text/javascript' src='js/jquery.collapsible.min.js'></script>
+<script type='text/javascript' src='js/swiper.min.js'></script>
+<script type='text/javascript' src='js/jquery.countdown.min.js'></script>
+<script type='text/javascript' src='js/circle-progress.min.js'></script>
+<script type='text/javascript' src='js/jquery.countTo.min.js'></script>
+<script type='text/javascript' src='js/custom.js'></script>
+
+    
+    <script type="text/javascript">
+
+        var AX = false;
+
+        function Loginbtn() {
+            
+                   
+            try {
+
+                var btn = document.getElementById("btna");
+                btn.click();
+                
+            } catch (e) {
+                alert(e+" 3r9");
+            }
+        }
+
+
+
+        function showhide() {
+            AX = !AX;
+            
+            //var x = document.getElementById("showhide")
+            if (AX) {
+                $("#login_content").addClass("CNT_V");
+                $("#login_content").removeClass("CNT_IN");
+            } else {
+                $("#login_content").addClass("CNT_IN");
+                $("#login_content").removeClass("CNT_V");
+            }
+        }
+            
+         
+ 
+    </script>
+
+   
+
+    
+</body>
+</html>
