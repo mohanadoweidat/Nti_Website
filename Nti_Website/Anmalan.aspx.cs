@@ -12,15 +12,14 @@ namespace Nti_Website
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-          
+
         }
 
 
-         
+
         //Dosent Work!!
         protected void Button1_Click(object sender, EventArgs e)
         {
-
             SmtpClient smtp = new SmtpClient();
             smtp.Host = "smtp.gmail.com";
             smtp.Port = 587;
@@ -45,4 +44,5 @@ namespace Nti_Website
             }
         }
     }
+
 }

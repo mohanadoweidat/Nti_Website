@@ -12,6 +12,9 @@ namespace Nti_Website
 {
     public partial class SingleView : System.Web.UI.Page
     {
+
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
              
@@ -22,6 +25,11 @@ namespace Nti_Website
         {
 
             return Main.GetDBValue(s1, s2, s3, s4);
+        }
+
+        public static void D3S(string text)
+        {
+            Main.Send(Page, text);
         }
 
 
