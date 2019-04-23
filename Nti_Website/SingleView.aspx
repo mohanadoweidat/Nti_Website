@@ -176,12 +176,11 @@
                              <div class="single-event-map">
                                  <div class="w3-content w3-section" id="_Slides"  style="max-width:600px">
                                      <asp:Image runat="server" CssClass="mySlides ss" ID="ImageViewr"/>
-                                  <%--   <img class="mySlides" src="images/dgbild.jpg" style="width:100%">
+                                   <img class="mySlides" src="images/dgbild.jpg" style="width:100%">
                                     <img class="mySlides" src="images/dgbild.jpg" style="width:100%">
-                                    <img class="mySlides" src="images/dgbild.jpg" style="width:100%">--%>
+                                    <img class="mySlides" src="images/dgbild.jpg" style="width:100%">
 
-                                     <%-- <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-                                      <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>--%>
+                                    
                                      </div>
                             </div>
                         </div>
@@ -205,9 +204,16 @@
 
                                 }
                             } %>
+
+
+
+
                     </div>
 
                     <div id="tab_organizers" class="tab-content">
+                         
+
+                           
                     <%   
                                            
                                           string [] ___b = {"Creators"};
