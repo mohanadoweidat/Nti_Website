@@ -22,7 +22,7 @@
                 </header>
 
                 <figure>
-                     <img src="images/dgbild.jpg" alt="Bild"> 
+                     <img src="images/dgbild.jpg" height="400" alt="Bild"> 
 
                   <%--  <div class="posted-date"><span>Feb</span><span>11</span><span>‘18</span></div>--%>
                 </figure>
@@ -46,7 +46,7 @@ En jury väljer ut de bästa bidragen men publiken på ITG-Awardsgalan röstar p
                 </header>
 
                 <figure>
-                     <img src="images/news-gymnasiearbete.png" alt="Gymnasiearbete"> 
+                     <img src="images/news-gymnasiearbete.png" height="400" alt="Gymnasiearbete"> 
 
                     <%--<div class="posted-date"><span>Feb</span><span>11</span><span>‘18</span></div>--%>
                 </figure>
@@ -71,7 +71,7 @@ En jury väljer ut de bästa bidragen men publiken på ITG-Awardsgalan röstar p
                 </header>
 
                 <figure>
-                    <img src="images/news-film.jpg" alt="Film"> 
+                    <img src="images/Film1.png" height="400" alt="Film"> 
 
                    <%-- <div class="posted-date"><span>Feb</span><span>11</span><span>‘18</span></div>--%>
                 </figure>
@@ -103,7 +103,7 @@ En jury väljer ut de bästa bidragen men publiken på ITG-Awardsgalan röstar p
                 </header>
 
                 <figure>
-                     <img src="images/msuik.jpg" alt="Musik"> 
+                     <img src="images/msuik.jpg" height="600" alt="Musik"> 
 
                   <%--  <div class="posted-date"><span>Feb</span><span>11</span><span>‘18</span></div>--%>
                 </figure>
@@ -127,14 +127,14 @@ En jury väljer ut de bästa bidragen men publiken på ITG-Awardsgalan röstar p
                 </header>
 
                 <figure>
-                     <img src="images/news-programmering.jpg" alt="Programmering"> 
+                     <img src="images/prog1.jpg" height="400" alt="Programmering"> 
 
                     <%--<div class="posted-date"><span>Feb</span><span>11</span><span>‘18</span></div>--%>
                 </figure>
 
                 <div class="entry-content">
                     <p>Juryn bedömer snabbhet, funktion, komplexitet och gränssnitt.
-                      Bidraget kan vara t.ex. ett spel, ett program eller en app. Projektbeskrivning skickas in via anmälningsformuläret. Programmeringskoden lämnas in personligen till programmeringslärare. Eventuellt kan en film som visar programmet vid körning komma att krävas vid inlämning av projektet eller också demonstreras det körbara programmet för juryn.</p>
+                      Bidraget kan vara t.ex. ett spel, ett program eller en app. Projektbeskrivning skickas in via anmälningsformuläret. Programmeringskoden lämnas in personligen till programmeringslärare. Samt en film som visar programmet vid körning komma att krävas vid inlämning av projektet eller också demonstreras det körbara programmet för juryn.</p>
                 </div>
             </article>
 
@@ -150,7 +150,7 @@ En jury väljer ut de bästa bidragen men publiken på ITG-Awardsgalan röstar p
                 </header>
 
                 <figure>
-                    <img src="images/news-webb.jpg" alt="Webbutveckling">
+                    <img src="images/we1.jpg" height="400" alt="Webbutveckling">
 
                    <%-- <div class="posted-date"><span>Feb</span><span>11</span><span>‘18</span></div>--%>
                 </figure>

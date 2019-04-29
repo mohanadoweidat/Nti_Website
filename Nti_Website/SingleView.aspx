@@ -14,6 +14,12 @@
             width:100%;
         }
 
+
+        video {
+         width: 100%;
+         height: auto;
+        }
+
     </style>
 
 
@@ -114,6 +120,7 @@
                     <li class="tab-nav flex justify-content-center align-items-center" data-target="#tab_details">Info</li>
                     <li class="tab-nav flex justify-content-center align-items-center" data-target="#tab_venue">Beskrivning</li>
                     <li class="tab-nav flex justify-content-center align-items-center" data-target="#tab_organizers">skapad av</li>
+                     <li class="tab-nav flex justify-content-center align-items-center" data-target="#tab_bilagor">Bilagor</li>
                 </ul>
 
                 <div class="tabs-container">
@@ -180,17 +187,25 @@
                              </div>
                              <div class="single-event-map">
                                  <div class="w3-content w3-section" id="_Slides"  style="max-width:600px">
-                                     <asp:Image runat="server" CssClass="mySlides ss" ID="ImageViewr"/>
                                                             <%
-                            string[] A = { "Data"};
-                            string data = "";
-                            for (int i = 0; i < A.Length; i++)
-                            {
-                                var _ = GET("Files",A[0],null,null);
-                                data = _[0].ToString();
-                            }
-                            //D3S(data);
-                            Response.Write("<img class=\"mySlider\" style=\"width:100%\" src=\"data:image/;base64,"+data+"\"/>");
+                                                                string[] A = { "Data"};
+                                                                string[] rol = { "ProjName"};
+                                                                string[] val = { c};
+                                                                for (int i = 0; i < A.Length; i++)
+                                                                {
+                                                                    var _ = GET("Files","Data",rol,val);
+                                                                   
+                                                                    for (int w = 0; w < _.Length; w++)
+                                                                    {
+                                                                            
+                                                                            string data = Convert.ToBase64String(_[w] as byte[]);
+                                                                            Response.Write("<img class=\"mySlides\" style=\"width:100%\" src=\"data:image/;base64,"+data+"\"/>");
+                                                                       
+                                                                    }
+
+                                                                }
+                                                                
+                                                                //Response.Write("<script> alert('"+data+"')</script>");
                             %>
                                      </div>
                             </div>
@@ -224,10 +239,8 @@
                     <div id="tab_organizers" class="tab-content">
                          
 
-                           
-                    <%   
-                                           
-                                          string [] ___b = {"Creators"};
+                         <%
+                            string [] ___b = {"Creators"};
  
                                           for (int i = 0; i < a.Length; i++)
                                           {
@@ -242,8 +255,48 @@
 
                                               }
                                           } %>
-                    </div>
 
+
+                           
+                  
+                    </div>
+                      <div id="tab_bilagor" class="tab-content">
+                         <asp:Button ID="Button1" runat="server" Visible="false" CssClass="btn gradient-bg" Text="Open pdf" OnClick="Button1_Click" OnClientClick="openInNewTab();"/>
+                          <asp:Label ID="bilaglbl" runat="server" Visible="false"></asp:Label>
+
+                                                               <%   
+
+                                                                   for (int i = 0; i < A.Length; i++)
+                                                                   {
+                                                                       var _ = GET("Files","Data",rol,val);
+                                                                       var _c = GET("Files","ContentType",rol,val);
+
+                                                                       for (int w = 0; w < _.Length; w++)
+                                                                       {
+                                                                           
+                                                                           string type = _c[w].ToString();
+                                                                           string d = type.Split('/')[0];
+                                                                           string data = Convert.ToBase64String(_[w] as byte[]);
+                                                                           Response.Write("<script>alert('" +d +"')</script>");
+                                                                           if (d == "video")
+                                                                           {
+                                                                                //<video width="130" height="130" controls>  
+                                                                                //  <source src='<%#Eval("Video_Path")%' type="video/mp4">  
+                                                                                //</video>  
+                                                                               Response.Write("<video width:\"400%\" controls><source src=\"data:video/;base64,"+data+"\" type=\"video/mp4\"></video>");
+                                                                           }
+                                                                           
+
+                                                                       }
+
+                                                                   }
+
+
+
+
+                                                               %>
+
+                 </div>
                 </div>
             </div>
         </div>
@@ -304,6 +357,8 @@
 <script type='text/javascript' src='js/jquery.countTo.min.js'></script>
 <script type='text/javascript' src='js/custom.js'></script>
 
+ 
+
     <script>
         var myIndex = 0;
         carousel();
@@ -343,6 +398,18 @@
 
 
 </script>
+
+
+    <script type="text/javascript">
+        function openInNewTab() {
+            window.document.forms[0].target = '_blank';
+            setTimeout(function () { window.document.forms[0].target = ''; }, 0);
+        }
+</script>
+
+
+ 
+
 
 </body>
 </html>

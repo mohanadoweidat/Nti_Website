@@ -206,7 +206,7 @@ margin-right: auto;
                          
                         <!--p>Alla bidrag anm&auml;ls via l&auml;nken:<a class="page-scroll" href="#contact"> <strong>Anm&auml;lan</strong></a--><br>
                           <p></p>Alla elever p&aring; NIT-Gymnasiet  Helsingborg &auml;r v&auml;lkomna  att sj&auml;lva skicka in och nominera sina bidrag<br>
-                          L&auml;rare p&aring; IT-Gymnasiet Helsingborg kan  nominera elevarbeten<br>
+                          L&auml;rare p&aring; NTI-Gymnasiet Helsingborg kan  nominera elevarbeten<br>
                           Bidragen f&aring;r inte inneh&aring;lla  upphovsr&auml;ttsskyddat material <br>
                           Ett bidrag kan nomineras i flera  kategorier men endast t&auml;vla i en kategori<br>
                           Bidragen f&aring;r ha en eller flera  upphovsm&auml;n<br>

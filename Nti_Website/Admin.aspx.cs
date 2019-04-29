@@ -41,30 +41,33 @@ namespace Nti_Website
             string _Creators = skapadav.Value;
             foreach (HttpPostedFile postedFile in file2.PostedFiles)
             {
-                SqlConnection sql2 = new SqlConnection(Connectionstring.con);
-                sql2.Open();
-                SqlCommand cmd2 = new SqlCommand();
-                cmd2.CommandText = "select * from [Files]";
-                cmd2.Connection = sql2;
-                SqlDataReader reader2 = cmd2.ExecuteReader();
-                while (reader2.Read())
-                {
-                     if (reader2[1].ToString() == _projnamn)
-                     {
-                          Nameexist = true;
-                          break;
-                     }
-                }
-                if (Nameexist == true)
-                {
-                   
-                    
-                    errorlabel.Visible = true;
-                    errorlabel.ForeColor = System.Drawing.Color.Red;
-                    errorlabel.Text = "Det finns redan ett projekt med samma namn!";
-                }
-                else
-                {
+                //SqlConnection sql2 = new SqlConnection(Connectionstring.con);
+                //sql2.Open();
+                //SqlCommand cmd2 = new SqlCommand();
+                //cmd2.CommandText = "select * from [Files]";
+                //cmd2.Connection = sql2;
+                //SqlDataReader reader2 = cmd2.ExecuteReader();
+                //while (reader2.Read())
+                //{
+                //     if (reader2[1].ToString() == _projnamn)
+                //     {
+                //          Nameexist = true;
+                //          break;
+                //     }
+                //}
+                //if (Nameexist == true)
+                //{
+
+
+                //    errorlabel.Visible = true;
+                //    errorlabel.ForeColor = System.Drawing.Color.Red;
+                //    errorlabel.Text = "Det finns redan ett projekt med samma namn!";
+                //}
+                //else
+                //{
+
+
+            //}
                     string filename = Path.GetFileName(postedFile.FileName);
                     string contentType = postedFile.ContentType;
                     using (Stream fs = postedFile.InputStream)
@@ -89,8 +92,8 @@ namespace Nti_Website
                             }
                         }
                     }
-                }
             }
+
 
             SqlConnection sql = new SqlConnection(Connectionstring.con);
             sql.Open();
@@ -98,8 +101,8 @@ namespace Nti_Website
             cmd.CommandText = "select * from [Projects]";
             cmd.Connection = sql;
             SqlDataReader reader = cmd.ExecuteReader();
-              while (reader.Read())
-              {
+            while (reader.Read())
+            {
 
                 if (reader[1].ToString() == _projnamn)
                 {
@@ -109,7 +112,7 @@ namespace Nti_Website
                     break;
                 }
 
-              }
+            }
             if (Nameexist == true)
             {
 
@@ -125,7 +128,7 @@ namespace Nti_Website
                 {
                     // Just get month and year
                     //  string ss = DateTime.Now.ToString("yyyyMM");
-                   // DateTime _year = Convert.ToDateTime(year.Value);
+                    // DateTime _year = Convert.ToDateTime(year.Value);
                     string _category = categ.Value;
                     string query2 = "insert into Projects values (@ProjName,@Description, @Creators, @Year, @Category)";
                     using (SqlCommand cmd2 = new SqlCommand(query2))
@@ -146,8 +149,8 @@ namespace Nti_Website
             lblMessage.Visible = true;
             lblMessage.ForeColor = System.Drawing.Color.Black;
             lblMessage.Text = "Projektet har lagts upp";
-            
-         }
+
+        }
     }
 }
 

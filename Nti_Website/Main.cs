@@ -23,6 +23,32 @@ namespace Nti_Website.Database
             Reg(page, "text", func);
         }
 
+        public static FileType GetFileType(string contentType)
+        {
+            FileType f = FileType.OTHER;
+            string[] d = contentType.Split('/');
+            if (d.Length > 0)
+            {
+                string a = d[0].ToLower();
+                if (a == "video")
+                {
+                    f = FileType.VIDEO;
+                } else if(a == "image")
+                {
+                    f = FileType.IMAGE;
+                }
+                //if (a == "jpeg" || a == "jpg" || a == "png" || a == "gif" || a == "tiff")
+                //{
+                //    f = FileType.IMAGE;
+                //}
+                //else if (a == "mp4" || a == "3gp" || a == )
+                //{
+
+                //}
+            }
+            return f;
+        }
+
         public static void Reg(Page page, string key, string func)
         {
             ScriptManager.RegisterStartupScript(page, page.GetType(), key, func, true);
@@ -32,6 +58,7 @@ namespace Nti_Website.Database
         public static object[] GetDBValue(string tableName, string search, string[] conditions, string[] values)
         {
             object[] val = new object[64];
+            object[] _val;
             using (SqlConnection connection = new SqlConnection(Connectionstring.con))
             {
                 connection.Open();
@@ -53,9 +80,19 @@ namespace Nti_Website.Database
                 SqlDataAdapter da = new SqlDataAdapter(query, connection);
                 DataSet ds = new DataSet();
                 da.Fill(ds);
+                int A = 0;
                 for(int x = 0; x < ds.Tables[0].Rows.Count; x++)
                 {
+                    A++;
                     val[x] = ds.Tables[0].Rows[x][search];
+                }
+                _val = new object[A];
+                for(int x = 0; x < val.Length; x++)
+                {
+                    if(val[x] != null)
+                    {
+                        _val[x] = val[x];
+                    }
                 }
                 connection.Close();
                 //val = ds.Tables.Count+"";
@@ -70,7 +107,7 @@ namespace Nti_Website.Database
             //}
             //string[] NEW = new string[valid];
 
-            return val;
+            return _val;
         }
 
     }

@@ -31,6 +31,15 @@ namespace Nti_Website {
         protected global::System.Web.UI.HtmlControls.HtmlInputText deltag;
         
         /// <summary>
+        /// __Kateg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText @__Kateg;
+        
+        /// <summary>
         /// form_name control.
         /// </summary>
         /// <remarks>
@@ -49,40 +58,40 @@ namespace Nti_Website {
         protected global::System.Web.UI.HtmlControls.HtmlInputText form_lastname;
         
         /// <summary>
-        /// Text1 control.
+        /// fnm2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText Text1;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText fnm2;
         
         /// <summary>
-        /// Text2 control.
+        /// lstnmn2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText Text2;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText lstnmn2;
         
         /// <summary>
-        /// Text3 control.
+        /// fnm3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText Text3;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText fnm3;
         
         /// <summary>
-        /// Text4 control.
+        /// lstnm3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText Text4;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText lstnm3;
         
         /// <summary>
         /// form_email control.
