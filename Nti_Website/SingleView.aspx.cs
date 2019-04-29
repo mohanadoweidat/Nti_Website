@@ -21,8 +21,8 @@ namespace Nti_Website
             var r5a = Main.GetDBValue("Files", "Data", new string[] { "ProjName" }, new string[] { Request.QueryString["ProjName"] });
             var _a = Main.GetDBValue("Files", "ContentType", new string[] { "ProjName" }, new string[] { Request.QueryString["ProjName"] });
             var a = "application/pdf";
-            bool isPDF = false;
-            bool isPDF1 = false;
+            bool SHOW = true;
+            bool PDF = false;
             for(int x = 0; x < r5a.Length; x++)
             {
                 Byte[] FileBuffer = (Byte[])r5a[x];
@@ -30,18 +30,18 @@ namespace Nti_Website
                 FileType T = Main.GetFileType(type);
                 if(T == FileType.OTHER || T == FileType.VIDEO)
                 {
-                    isPDF = true;
+                    SHOW = false;
                     if(T == FileType.OTHER)
                     {
-                        isPDF1 = true;
+                        PDF = true;
                     }
                 }
             }
-            if (isPDF1)
+            if (PDF)
             {
                 Button1.Visible = true;
             }
-            else
+            if(SHOW)
             {
                 Button1.Visible = false;
                 bilaglbl.Visible = true;

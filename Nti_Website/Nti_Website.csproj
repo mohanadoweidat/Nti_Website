@@ -154,6 +154,7 @@
     <Content Include="images\next1.jpg" />
     <Content Include="images\next2.jpg" />
     <Content Include="images\next3.jpg" />
+    <Content Include="images\no-image.png" />
     <Content Include="images\phone-icon.png" />
     <Content Include="images\pixar.png" />
     <Content Include="images\prog1.jpg" />
@@ -186,6 +187,7 @@
     <Content Include="js\swiper.js" />
     <Content Include="js\swiper.min.js" />
     <Content Include="Kategorier.aspx" />
+    <Content Include="no-image.png" />
     <Content Include="Projects.aspx" />
     <Content Include="Regler.aspx" />
     <Content Include="SingleView.aspx" />

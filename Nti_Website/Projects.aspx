@@ -94,7 +94,9 @@
 </header><!-- .site-header -->
 
 
-
+             <div>
+                 <asp:DropDownList runat="server" ID="DropDowner" AutoPostBack="true" OnSelectedIndexChanged="DropDowner_SelectedIndexChanged"></asp:DropDownList>
+             </div>
 
              <div class="container" style="background-color:paleturquoise; margin-top:25px; margin-bottom:25px;">
 
@@ -102,19 +104,37 @@
 
                  
                 <%   
-                    string[] a = { "ProjName"};
-                    for (int i = 0; i < a.Length; i++)
+                    string[] a = { "ProjName", "Category"};
                     {
                         var _ = GET("Projects",a[0],null,null);
-                        foreach(string s in _)
+                        var _c = GET("Projects",a[1],null,null);
+                        string value = Request.QueryString["Filter"];
+                        for(int x = 0; x < _.Length; x++)
                         {
-                            if (s != null)
+                            if (_[x] != null)
                             {
-                                 Response.Write("<center><a class=\"proj\" href=\"SingleView.aspx?ProjName="+s+"\">"+s+"</a><br/></center>");
+                                bool f = false;
+                                if(value == null || value == "none" || _c[x] == null)
+                                {
+                                    f = true;
+                                } else
+                                {
+                                    if(value == _c[x].ToString())
+                                    {
+                                        f = true;
+                                    }
+                                }
+                                if (f)
+                                {
+                                    Response.Write("<center><a class=\"proj\" href=\"SingleView.aspx?ProjName="+_[x]+"\">"+_[x]+"</a><br/></center>");
+                                }
+
                             }
-                           
+
                         }
-                    } %>
+                    }
+
+                    %>
              </div>
                   
 

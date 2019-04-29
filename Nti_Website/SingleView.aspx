@@ -20,6 +20,11 @@
          height: auto;
         }
 
+        .TextItem {
+            font-size: 24px;
+            color: black;
+        }
+
     </style>
 
 
@@ -100,7 +105,6 @@
                 <div class="col-12">
                     <header class="entry-header">
                         <% Response.Write("<h1 class=\"entry-title\">" + Request.QueryString["ProjName"].ToString() +"</h1>"); %>
-                        <%--<h1 class="entry-title"></h1>--%>
                     </header>
                 </div>
             </div>
@@ -191,27 +195,30 @@
                                                                 string[] A = { "Data"};
                                                                 string[] rol = { "ProjName"};
                                                                 string[] val = { c};
+                                                                bool found = false;
                                                                 for (int i = 0; i < A.Length; i++)
                                                                 {
                                                                     var _ = GET("Files","Data",rol,val);
-                                                                   
+                                                                    var _c = GET("Files","ContentType",rol,val);
                                                                     for (int w = 0; w < _.Length; w++)
                                                                     {
-                                                                            
+                                                                        string dataType = _c[w].ToString();
+                                                                        if(get_type(dataType) == Nti_Website.FileType.IMAGE) {
+                                                                            found = true;
                                                                             string data = Convert.ToBase64String(_[w] as byte[]);
                                                                             Response.Write("<img class=\"mySlides\" style=\"width:100%\" src=\"data:image/;base64,"+data+"\"/>");
-                                                                       
+                                                                        }
                                                                     }
-
                                                                 }
-                                                                
-                                                                //Response.Write("<script> alert('"+data+"')</script>");
+                                                                if (!found)
+                                                                {
+                                                                    Response.Write("<img class=\"mySlides\" style=\"width:100%; border-radius: 10px;\" src=\"images/no-image.png\"/>");
+                                                                }
                             %>
                                      </div>
                             </div>
                         </div>
                     </div>
-
                     <div id="tab_venue" class="tab-content">
                         <%   
 
@@ -225,7 +232,7 @@
                                 {
                                     if (s != null)
                                     {
-                                        Response.Write("<p>"+s+"</p>");
+                                        Response.Write("<p class=\"TextItem\">"+s+"</p>");
                                     }
 
                                 }
@@ -250,7 +257,7 @@
                                               {
                                                   if (s != null)
                                                   {
-                                                      Response.Write("<p>"+s+"</p>");
+                                                      Response.Write("<p class=\"TextItem\">"+s+"</p>");
                                                   }
 
                                               }
@@ -261,8 +268,8 @@
                   
                     </div>
                       <div id="tab_bilagor" class="tab-content">
-                         <asp:Button ID="Button1" runat="server" Visible="false" CssClass="btn gradient-bg" Text="Open pdf" OnClick="Button1_Click" OnClientClick="openInNewTab();"/>
-                          <asp:Label ID="bilaglbl" runat="server" Visible="false"></asp:Label>
+                         <asp:Button ID="Button1" runat="server" Visible="false" CssClass="btn gradient-bg" Text="Öppna pdf filen" OnClick="Button1_Click" OnClientClick="openInNewTab();"/>
+                          <asp:Label ID="bilaglbl" runat="server" Visible="false" CssClass="TextItem"></asp:Label>
 
                                                                <%   
 
@@ -277,7 +284,6 @@
                                                                            string type = _c[w].ToString();
                                                                            string d = type.Split('/')[0];
                                                                            string data = Convert.ToBase64String(_[w] as byte[]);
-                                                                           Response.Write("<script>alert('" +d +"')</script>");
                                                                            if (d == "video")
                                                                            {
                                                                                 //<video width="130" height="130" controls>  
