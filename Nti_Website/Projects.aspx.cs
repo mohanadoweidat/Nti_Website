@@ -30,6 +30,7 @@ namespace Nti_Website
                         ListItem item = new ListItem();
                         item.Text = Cate[x].ToString();
                         item.Value = Cate[x].ToString();
+                       
                         DropDowner.Items.Add(item);
                         added.Add(Cate[x].ToString());
                     }

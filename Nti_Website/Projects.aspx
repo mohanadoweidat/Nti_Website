@@ -24,6 +24,8 @@
     <link rel="stylesheet" href="css/proj.css"/>
 
      <link rel="stylesheet" href="css/main.css"/>
+
+ 
     
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 
@@ -93,11 +95,13 @@
     </div>
 </header><!-- .site-header -->
 
+             
 
-             <div>
-                 <asp:DropDownList runat="server" ID="DropDowner" AutoPostBack="true" OnSelectedIndexChanged="DropDowner_SelectedIndexChanged"></asp:DropDownList>
+            
+             <div class="container-fluid">
+                 <asp:DropDownList runat="server" CssClass="btn gradient" ID="DropDowner" AutoPostBack="true" OnSelectedIndexChanged="DropDowner_SelectedIndexChanged"></asp:DropDownList>
              </div>
-
+               
              <div class="container" style="background-color:paleturquoise; margin-top:25px; margin-bottom:25px;">
 
                  

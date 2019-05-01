@@ -137,7 +137,13 @@ input:hover{
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 
  
+    <style>
 
+        .sss{
+
+            background-color:white !important
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -209,7 +215,7 @@ input:hover{
 
                 <div class="col-lg-12 text-center" id="adress">
                     <h4 class="service-heading">Fyll i formul&auml;ret nedan eller anm&auml;l och l&auml;mna ditt bidrag <br>
-till Nayef via USB-sticka</h4>
+till en lärare via USB-sticka</h4>
                     </div>
 
                 <div class="row">
@@ -228,7 +234,7 @@ till Nayef via USB-sticka</h4>
                                               <%--<label for="form_phone">Antal deltagare</label>
  					                          <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="Välj antal deltagare">--%>
 
-        <input list="Deltagare" name="inp" value="Välj: Antal Deltagare" onfocus="this.value = '';"   onblur="if (this.value == '') {this.value = 'Välj: Antal Deltagare';}" type="text" runat="server"  id="deltag"/>
+        <input list="Deltagare" class="btn gradient" name="inp" value="Välj: Antal Deltagare" onfocus="this.value = '';"   onblur="if (this.value == '') {this.value = 'Välj: Antal Deltagare';}" type="text" runat="server"  id="deltag"/>
     <datalist id="Deltagare">
     <option value="1"/>
     <option value="2"/>
@@ -237,7 +243,7 @@ till Nayef via USB-sticka</h4>
 
 
 
-                                            <input list="Kategori"  name="katg" value="Välj: Kategori" onfocus="this.value = '';"   onblur="if (this.value == '') {this.value = 'Välj: Kategori';}" type="text" runat="server"  id="__Kateg"/>
+                                            <input list="Kategori" class="btn gradient"  name="katg" value="Välj: Kategori*" onfocus="this.value = '';"   onblur="if (this.value == '') {this.value = 'Välj: Kategori*';}" type="text" runat="server" id="__Kateg" required="required" data-error="Obligatoriskt fält."/>
     <datalist id="Kategori">
     <option value="Bästa Digitala bild"/>
     <option value="Bästa Gymnasiearbete"/>
@@ -253,42 +259,42 @@ till Nayef via USB-sticka</h4>
     					              <div class="col-md-6" id="fname1">
 					                  <div class="form-group">
 					                      <label for="form_name">Förnamn *</label>
-					                      <input runat="server"  id="form_name" type="text" name="name" class="form-control" placeholder="Vänligen skriv ditt förnamn *" required="required" data-error="Obligatoriskt fält.">
+					                      <input runat="server" id="form_name" type="text" name="name"  class="form-control btn" placeholder="Vänligen skriv ditt förnamn *" required="required" data-error="Obligatoriskt fält."/>
 					                      <div class="help-block with-errors"></div>
 					                  </div>
 					              </div>
  					              <div class="col-md-6" id="lname1">
 					                  <div class="form-group">
 					                      <label for="form_lastname">Efternamn *</label>
-					                      <input runat="server" id="form_lastname" type="text" name="surname" class="form-control" placeholder="Vänligen skriv ditt efternamn *" required="required" data-error="Obligatoriskt fält.">
+					                      <input runat="server" id="form_lastname" type="text" name="surname" class="form-control btn" placeholder="Vänligen skriv ditt efternamn *" required="required" data-error="Obligatoriskt fält."/>
 					                      <div class="help-block with-errors"></div>
 					                  </div>
 					              </div>
                                     <div class="col-md-6" id="fname2">
 					                  <div class="form-group">
 					                      <label for="form_name">Förnamn *</label>
-					                      <input runat="server"  id="fnm2" type="text" name="name" class="form-control" placeholder="Vänligen skriv ditt förnamn *" required="required" data-error="Obligatoriskt fält.">
+					                      <input runat="server"  id="fnm2" type="text" name="name" class="form-control btn" placeholder="Vänligen skriv ditt förnamn *" required="required" data-error="Obligatoriskt fält.">
 					                      <div class="help-block with-errors"></div>
 					                  </div>
 					              </div>
  					              <div class="col-md-6" id="lname2">
 					                  <div class="form-group">
 					                      <label for="form_lastname">Efternamn *</label>
-					                      <input runat="server" id="lstnmn2" type="text" name="surname" class="form-control" placeholder="Vänligen skriv ditt efternamn *" required="required" data-error="Obligatoriskt fält.">
+					                      <input runat="server" id="lstnmn2" type="text" name="surname" class="form-control btn" placeholder="Vänligen skriv ditt efternamn *" required="required" data-error="Obligatoriskt fält.">
 					                      <div class="help-block with-errors"></div>
 					                  </div>
 					              </div>
                                      <div class="col-md-6" id="fname3">
 					                  <div class="form-group">
 					                      <label for="form_name">Förnamn *</label>
-					                      <input runat="server"  id="fnm3" type="text" name="name" class="form-control" placeholder="Vänligen skriv ditt förnamn *" required="required" data-error="Obligatoriskt fält.">
+					                      <input runat="server"  id="fnm3" type="text" name="name" class="form-control btn" placeholder="Vänligen skriv ditt förnamn *" required="required" data-error="Obligatoriskt fält.">
 					                      <div class="help-block with-errors"></div>
 					                  </div>
 					              </div>
  					              <div class="col-md-6" id="lname3">
 					                  <div class="form-group">
 					                      <label for="form_lastname">Efternamn *</label>
-					                      <input runat="server" id="lstnm3" type="text" name="surname" class="form-control" placeholder="Vänligen skriv ditt efternamn *" required="required" data-error="Obligatoriskt fält.">
+					                      <input runat="server" id="lstnm3" type="text" name="surname" class="form-control btn" placeholder="Vänligen skriv ditt efternamn *" required="required" data-error="Obligatoriskt fält.">
 					                      <div class="help-block with-errors"></div>
 					                  </div>
 					              </div>
@@ -299,7 +305,7 @@ till Nayef via USB-sticka</h4>
                                        <div class="col-md-12">
 					                  <div class="form-group">
 					                      <label for="form_email">E-post *</label>
-					                      <input runat="server" id="form_email" type="email" name="email" class="form-control" placeholder="Vänligen skriv din e-postadress här *" required="required" data-error="Giltig e-postadress krävs.">
+					                      <input runat="server" id="form_email" type="email" name="email" class="form-control btn gradient-bg" placeholder="Vänligen skriv din e-postadress här *" required="required" data-error="Giltig e-postadress krävs.">
 					                      <div class="help-block with-errors"></div>
 					                  </div>
 					              </div>
