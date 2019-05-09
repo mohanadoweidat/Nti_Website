@@ -233,18 +233,22 @@ till en lärare via USB-sticka</h4>
 					                      
                                               <%--<label for="form_phone">Antal deltagare</label>
  					                          <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="Välj antal deltagare">--%>
-
-        <input list="Deltagare" class="btn gradient" name="inp" value="Välj: Antal Deltagare" onfocus="this.value = '';"   onblur="if (this.value == '') {this.value = 'Välj: Antal Deltagare';}" type="text" runat="server"  id="deltag"/>
+                                          
+        <input list="Deltagare" class="btn gradient-bg" name="inp" value="Välj: Antal Deltagare" onfocus="this.value = '';"   onblur="if (this.value == '') {this.value = 'Välj: Antal Deltagare';}" type="text" runat="server"  id="deltag"/>
     <datalist id="Deltagare">
     <option value="1"/>
     <option value="2"/>
-    <option value="3"/>
+     <option value="3"/>
+    <option value="4"/>
+    <option value="100"/>
+  
+
     </datalist>
 
 
 
-                                            <input list="Kategori" class="btn gradient"  name="katg" value="Välj: Kategori*" onfocus="this.value = '';"   onblur="if (this.value == '') {this.value = 'Välj: Kategori*';}" type="text" runat="server" id="__Kateg" required="required" data-error="Obligatoriskt fält."/>
-    <datalist id="Kategori">
+                                            <input list="Kategori" class="btn gradient-bg"  name="katg" value="Välj: Kategori*" onfocus="this.value = '';"   onblur="if (this.value == '') {this.value = 'Välj: Kategori*';}" type="text" runat="server" id="__Kateg" required="required" data-error="Obligatoriskt fält."/>
+    <datalist id="Kategori" runat="server">
     <option value="Bästa Digitala bild"/>
     <option value="Bästa Gymnasiearbete"/>
     <option value="Bästa Film"/>
@@ -256,49 +260,51 @@ till en lärare via USB-sticka</h4>
  				      <div class="help-block with-errors"></div>
 					                  </div>
 					              </div>
-    					              <div class="col-md-6" id="fname1">
+                                  <div class="row" id="all">
+<%--    					              <div class="col-md-6" id="fname1">
 					                  <div class="form-group">
-					                      <label for="form_name">Förnamn *</label>
+					                      <label for="form_name" runat="server" id="fr1">Förnamn *</label>
 					                      <input runat="server" id="form_name" type="text" name="name"  class="form-control btn" placeholder="Vänligen skriv ditt förnamn *" required="required" data-error="Obligatoriskt fält."/>
 					                      <div class="help-block with-errors"></div>
 					                  </div>
 					              </div>
  					              <div class="col-md-6" id="lname1">
 					                  <div class="form-group">
-					                      <label for="form_lastname">Efternamn *</label>
+					                      <label for="form_lastname" runat="server"  id="ls1">Efternamn *</label>
 					                      <input runat="server" id="form_lastname" type="text" name="surname" class="form-control btn" placeholder="Vänligen skriv ditt efternamn *" required="required" data-error="Obligatoriskt fält."/>
 					                      <div class="help-block with-errors"></div>
 					                  </div>
 					              </div>
                                     <div class="col-md-6" id="fname2">
 					                  <div class="form-group">
-					                      <label for="form_name">Förnamn *</label>
+					                      <label for="form_name" runat="server" id="fr2">Förnamn *</label>
 					                      <input runat="server"  id="fnm2" type="text" name="name" class="form-control btn" placeholder="Vänligen skriv ditt förnamn *" required="required" data-error="Obligatoriskt fält.">
 					                      <div class="help-block with-errors"></div>
 					                  </div>
 					              </div>
  					              <div class="col-md-6" id="lname2">
 					                  <div class="form-group">
-					                      <label for="form_lastname">Efternamn *</label>
+					                      <label for="form_lastname" runat="server" id="ls2">Efternamn *</label>
 					                      <input runat="server" id="lstnmn2" type="text" name="surname" class="form-control btn" placeholder="Vänligen skriv ditt efternamn *" required="required" data-error="Obligatoriskt fält.">
 					                      <div class="help-block with-errors"></div>
 					                  </div>
 					              </div>
                                      <div class="col-md-6" id="fname3">
 					                  <div class="form-group">
-					                      <label for="form_name">Förnamn *</label>
+					                      <label for="form_name" runat="server" id="fr3">Förnamn *</label>
 					                      <input runat="server"  id="fnm3" type="text" name="name" class="form-control btn" placeholder="Vänligen skriv ditt förnamn *" required="required" data-error="Obligatoriskt fält.">
 					                      <div class="help-block with-errors"></div>
 					                  </div>
 					              </div>
  					              <div class="col-md-6" id="lname3">
 					                  <div class="form-group">
-					                      <label for="form_lastname">Efternamn *</label>
+					                      <label for="form_lastname" runat="server" id="ls3">Efternamn *</label>
 					                      <input runat="server" id="lstnm3" type="text" name="surname" class="form-control btn" placeholder="Vänligen skriv ditt efternamn *" required="required" data-error="Obligatoriskt fält.">
 					                      <div class="help-block with-errors"></div>
 					                  </div>
-					              </div>
+					              </div>--%>
                                      </div>
+                                  </div>
 					          <div class="row">
  					          </div>
 					          <div class="row">
@@ -318,9 +324,14 @@ till en lärare via USB-sticka</h4>
 					                  </div>
 					              </div>
 					              <div class="col-md-12">
-                                      <asp:Button ID="Button1" runat="server" Text="Skicka"  CssClass="btn gradient-bg" OnClick="Button1_Click"/>
+                                      <input type="button" id="confirm" runat="server" value="Skicka"  class="btn gradient-bg" onclick="ConfirmClicked()"/>
 					              </div>
 					          </div>
+                                                               <asp:HiddenField ID="hdnfldVariable" runat="server" />
+                              <div style="display: none">
+                                  <asp:Button ID="r5a" runat="server" OnClick="r5a_Click"/>
+
+                              </div>
 					          <div class="row">
 					              <div class="col-md-12">
 					                  <p class="text-muted"><strong>*</strong> Obligatoriskt fält.</p>
@@ -385,131 +396,48 @@ till en lärare via USB-sticka</h4>
 <script type='text/javascript' src='js/custom.js'></script>
 
 
-
+    
     <script>
 
         $(function () {
-            $('#fname1').hide();
-            $('#lname1').hide();
-            $('#fname2').hide();
-            $('#lname2').hide();
-            $('#fname3').hide();
-            $('#lname3').hide();
+
         });
 
-        //$(function() {
+        function ref() {
+            var _html = "";
+            var r = parseInt($('#deltag').val());
+            for (x = 0; x < r; x++) {
+                _html +="<div class=\"form-group col-md-6\"><label for=\"form_name\">Förnamn *</label><input id=\"fn" + x + "\" type=\"text\" name=\"name\" class=\"form-control btn\" placeholder=\"Vänligen skriv ditt förnamn *\" required=\"required\" data-error=\"Obligatoriskt fält.\"/><div class=\"help-block with-errors\"></div></div>";
+                _html +="<div class=\"form-group col-md-6\"><label for=\"form_lastname\">Efternamn *</label><input id=\"ln" + x + "\" type =\"text\" name=\"surname\" class=\"form-control btn\" placeholder=\"Vänligen skriv ditt efternamn *\" required=\"required\" data-error=\"Obligatoriskt fält.\"/><div class=\"help-block with-errors\"></div></div >";
+            }
+            $('#all').html(_html);
+        }
+
+        function ConfirmClicked() {
+            var r = parseInt($('#deltag').val());
+            var valva = "";
+            for (x = 0; x < r; x++) {
+                if (x > 0) {
+                    valva += "$";
+                }
+                valva += $('#fn' + x).val()+","+$('#ln'+x).val();
+            }
+            try {
+                var hdnfldVariable = document.getElementById('hdnfldVariable');
+                hdnfldVariable.value = valva;
+                $("#<%=r5a.ClientID%>").click();
+
+            } catch (e) {
+                alert(e);
+            }
             
-        //    $('#deltag').change(function() {
-        //        if ($('#deltag').val() == '1') {
-        //            $('#fname1').show();
-        //            $('#lname1').show();
-
-        //        } else {
-        //            $('#fname1').hide();
-        //            $('#lname1').hide();
-        //            $('#fname2').hide();
-        //            $('#lname2').hide();
-        //            $('#fname3').hide();
-        //            $('#lname3').hide();
-        //        }
-        //      });
-        //});
-
-
-
-
-        //$(function() {
-        //    $('#deltag').change(function() {
-        //        if ($('#deltag').val() == '2') {
-        //            $('#fname1').show();
-        //            $('#lname1').show();
-        //            $('#fname2').show();
-        //            $('#lname2').show();
-        //              $('#fname3').hide();
-        //              $('#lname3').hide()
-        //        } else {
-        //            $('#fname1').hide();
-        //            $('#lname1').hide();
-        //            $('#fname2').hide();
-        //            $('#lname2').hide();
-        //            $('#fname3').hide();
-        //            $('#lname3').hide();
-        //        }
-
-        //    });
-
-        //});
-
-
-
-
-        //$(function() {
-        //    $('#deltag').change(function () {
-
-        //         if ($('#deltag').val() == '3') {
-        //            $('#fname1').show();
-        //            $('#lname1').show();
-        //            $('#fname2').show();
-        //            $('#lname2').show();
-        //            $('#fname3').show();
-        //            $('#lname3').show();
-        //        } else {
-        //            $('#fname1').hide();
-        //            $('#lname1').hide();
-        //            $('#fname2').hide();
-        //            $('#lname2').hide();
-        //            $('#fname3').hide();
-        //            $('#lname3').hide();
-        //        }
-
-        //    });
-
-        //});
-
+        }
 
         $(function () {
             $('#deltag').change(function () {
-                if ($('#deltag').val() == '1') {
-                    $('#fname1').show();
-                    $('#lname1').show();
-                    $('#fname2').hide();
-                    $('#lname2').hide();
-                    $('#fname3').hide();
-                    $('#lname3').hide();
-                }
-               
-                if ($('#deltag').val() == '2') {
-                    $('#fname1').show();
-                    $('#lname1').show();
-                    $('#fname2').show();
-                    $('#lname2').show();
-                    $('#fname3').hide();
-                    $('#lname3').hide();
-                }
-                else if ($('#deltag').val() == '3') {
-                    $('#fname1').show();
-                    $('#lname1').show();
-                    $('#fname2').show();
-                    $('#lname2').show();
-                    $('#fname3').show();
-                    $('#lname3').show();
-                }
-                //else {
-                //    $('#fname1').hide();
-                //    $('#lname1').hide();
-                //    $('#fname2').hide();
-                //    $('#lname2').hide();
-                //    $('#fname3').hide();
-                //    $('#lname3').hide();
-                //}
-
-            });
-
-        });
-
-
-
-
-    </script>
+                ref();
+              });
+         });
+      </script>
 </body>
 </html>

@@ -110,8 +110,8 @@
                         <div id="login_content" class="CNT_IN" style="float:right">
                         <p> <b>Användarnamn:</b><asp:TextBox  CssClass="desgin" TextMode="SingleLine" OnFocus="this.style.borderColor='#9a24c1'" OnBlur="this.style.borderColor='black'"  ID="usr_box" runat="server" placeholder=" Username"></asp:TextBox></p>
   <p><b>Lösenord:</b>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<asp:TextBox  OnFocus="this.style.borderColor='#9a24c1'" OnBlur="this.style.borderColor='black'" TextMode="Password"  CssClass="desgin" ID="pass_box" runat="server" placeholder=" Password"></asp:TextBox></p>
- <p><input type="button" value="Logga in" class="Logbtn gradient-bg"  onclick="Loginbtn()" 
-      runat="server" id="btin"/></p>
+ <center><p><input type="button" value="Logga in" class="Logbtn gradient-bg"  onclick="Loginbtn()" 
+      runat="server" id="btin"/></p></center>
                     </div>
         </div><!-- .container-fluid -->
     </div><!-- .header-bar -->
