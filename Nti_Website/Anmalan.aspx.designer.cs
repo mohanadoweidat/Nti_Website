@@ -40,58 +40,13 @@ namespace Nti_Website {
         protected global::System.Web.UI.HtmlControls.HtmlInputText @__Kateg;
         
         /// <summary>
-        /// form_name control.
+        /// Kategori control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText form_name;
-        
-        /// <summary>
-        /// form_lastname control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText form_lastname;
-        
-        /// <summary>
-        /// fnm2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText fnm2;
-        
-        /// <summary>
-        /// lstnmn2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText lstnmn2;
-        
-        /// <summary>
-        /// fnm3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText fnm3;
-        
-        /// <summary>
-        /// lstnm3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText lstnm3;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Kategori;
         
         /// <summary>
         /// form_email control.
@@ -112,12 +67,30 @@ namespace Nti_Website {
         protected global::System.Web.UI.HtmlControls.HtmlTextArea form_message;
         
         /// <summary>
-        /// Button1 control.
+        /// confirm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.HtmlControls.HtmlInputButton confirm;
+        
+        /// <summary>
+        /// hdnfldVariable control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hdnfldVariable;
+        
+        /// <summary>
+        /// r5a control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button r5a;
     }
 }

@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="js/custom.js"></script>
 
-
+    
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
    
@@ -37,9 +37,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-
-           
-            <header class="site-header">
+              <header class="site-header">
     <div class="header-bar">
         <div class="container-fluid">
             <div class="row align-items-center">
@@ -80,8 +78,13 @@
             </div><!-- .row -->
                 <div class="buy-tickets" style="float: right">
                  <asp:Panel runat="server" ID="pnl1">
-             <p><a class="btn gradient-bg" id="showhide" onclick="showhide()"
-                 style="color: white">Inloggning</a></p>
+                 
+                     <!-- Link to open the modal -->
+                      
+                         <p><a  class="btn gradient-bg" id="showhide" onclick="showhide()" >Inloggning</a></p>
+                      
+             
+
                  </asp:Panel>
                     <asp:Panel runat="server" ID="pnl2">
                          <asp:Label ID="wlc" runat="server" CssClass="btn gradient-bg"></asp:Label>
@@ -98,10 +101,8 @@
                         <div id="login_content" class="CNT_IN" style="float:right">
                         <p> <b>Användarnamn:</b><asp:TextBox  CssClass="desgin" TextMode="SingleLine" OnFocus="this.style.borderColor='#9a24c1'" OnBlur="this.style.borderColor='black'"  ID="usr_box" runat="server" placeholder=" Username"></asp:TextBox></p>
   <p><b>Lösenord:</b>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<asp:TextBox  OnFocus="this.style.borderColor='#9a24c1'" OnBlur="this.style.borderColor='black'" TextMode="Password"  CssClass="desgin" ID="pass_box" runat="server" placeholder=" Password"></asp:TextBox></p>
-                            <center><div>
-                                 <p><input type="button" value="Logga in" class="Logbtn gradient-bg" onclick="Loginbtn()" 
-      runat="server" id="btin"/></p>
-                            </div></center>
+ <center><p><input type="button" value="Logga in" class="Logbtn gradient-bg"  onclick="Loginbtn()" 
+      runat="server" id="btin"/></p></center>
                     </div>
         </div><!-- .container-fluid -->
     </div><!-- .header-bar -->
@@ -149,7 +150,7 @@
                 </div><!-- .swiper-slide -->
             </div><!-- .swiper-wrapper -->
 
-            <div class="swiper-slide" data-date="2019/6/03" style="background: url('images/header-bg.jpg') no-repeat">
+          <%--  <div class="swiper-slide" data-date="2019/6/03" style="background: url('images/slider2.jpg') no-repeat">
                 <div class="hero-content">
                     <div class="container">
                         <div class="row">
@@ -179,17 +180,16 @@
 
                                     <h2 class="entry-title">2 We have the best events. <br>Get your tiket now!</h2>
                                 </div><!--- .entry-header -->
-
-                                <div class="entry-footer">
+                                 <div class="entry-footer">
                                     <a class="btn gradient-bg" href="#">Order here</a>
                                 </div><!-- .entry-footer" -->
                             </div><!-- .col -->
                         </div><!-- .container -->
                     </div><!-- .hero-content -->
                 </div><!-- .swiper-slide -->
-            </div><!-- .swiper-wrapper -->
+            </div><!-- .swiper-wrapper -->--%>
 
-            <div class="swiper-slide" data-date="2019/6/03" style="background: url('images/header-bg.jpg') no-repeat">
+          <%--  <div class="swiper-slide" data-date="2019/6/03" style="background: url('images/header-bg.jpg') no-repeat">
                 <div class="hero-content">
                     <div class="container">
                         <div class="row">
@@ -227,7 +227,7 @@
                         </div><!-- .container -->
                     </div><!-- .hero-content -->
                 </div><!-- .swiper-slide -->
-            </div><!-- .swiper-wrapper -->
+            </div><!-- .swiper-wrapper -->--%>
         </div>
 
         <!-- Add Pagination -->

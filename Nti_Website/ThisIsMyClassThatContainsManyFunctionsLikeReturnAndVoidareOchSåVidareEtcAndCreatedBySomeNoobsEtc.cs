@@ -10,12 +10,14 @@ namespace Nti_Website
 
         public ThisIsMyClassThatContainsManyFunctionsLikeReturnAndVoidareOchSåVidareEtcAndCreatedBySomeNoobsEtc()
         {
-
+            //Danger Zone Dude!!!!!!
+            //****
         }
 
         public static void DoSomethingGoodInOrderToBuySomeChocolateBarsFromYourNearbyStoreAndComeBackThenياخرا()
         {
-            
+            //MotherFucker!!!
+            //Dont steal the Code idiot!!!!****
         }
 
 

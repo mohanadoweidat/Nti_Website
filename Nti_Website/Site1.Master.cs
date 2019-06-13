@@ -73,11 +73,11 @@ namespace Nti_Website
 
 
             // string both = Username + Password;
-            if (Username == "" || Password == "")
+            if (Username == "" && Password == "")
             {
 
-                //ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "text", "alert('Fyll i alla fälten!')", true);
-                ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "text", "alert('" + Username + " " + Password + "')", true);
+                ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "text", "alert('Fyll i alla fälten!')", true);
+                 
             }
             else
             {
