@@ -97,16 +97,6 @@ namespace Nti_Website.Database
                 connection.Close();
                 //val = ds.Tables.Count+"";
             }
-            //int valid = 0;
-            //for(int x = 0; x < val.Length; x++)
-            //{
-            //    if(val[x] != null)
-            //    {
-            //        valid++;
-            //    }
-            //}
-            //string[] NEW = new string[valid];
-
             return _val;
         }
 

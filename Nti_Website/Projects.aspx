@@ -50,7 +50,7 @@
                     </div><!-- .site-branding -->
                 </div><!-- .col -->
 
-                <div class="col-2 col-lg-7 order-3 order-lg-2">
+                <div class="col-2 col-lg-9 order-3 order-lg-2">
                     <nav class="site-navigation">
                         <div class="hamburger-menu d-lg-none">
                             <span></span>
@@ -93,14 +93,11 @@
     </div>
 </header><!-- .site-header -->
 
-
-             <div>
-                 <asp:DropDownList runat="server" ID="DropDowner" AutoPostBack="true" OnSelectedIndexChanged="DropDowner_SelectedIndexChanged"></asp:DropDownList>
-             </div>
-
              <div class="container" style="background-color:paleturquoise; margin-top:25px; margin-bottom:25px;">
 
-                 
+                              <div>
+                 <asp:DropDownList runat="server" ID="DropDowner" AutoPostBack="true" AppendDataBoundItems="true" OnSelectedIndexChanged="DropDowner_SelectedIndexChanged"></asp:DropDownList>
+             </div>
 
                  
                 <%   

@@ -10,7 +10,7 @@ namespace Nti_Website
 {
     public partial class Projects : System.Web.UI.Page
     {
-
+        public static int SEL = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
             //string a = Main.GetDBValue("Projects", "Description", new string[] { "ProjName" }, new string[] { "Mohanad" });
@@ -35,8 +35,6 @@ namespace Nti_Website
                     }
                 }
             }
-            //string value = Request.QueryString["Filter"];
-            //DropDowner.SelectedIndex = GET_INDEX(value);
         }
 
         private int GET_INDEX(string value)
@@ -59,6 +57,7 @@ namespace Nti_Website
 
         protected void DropDowner_SelectedIndexChanged(object sender, EventArgs e)
         {
+            SEL = DropDowner.SelectedIndex;
             string value = DropDowner.SelectedItem.Value;
             //string current = Request.QueryString["Filter"];
             //if(current != value)

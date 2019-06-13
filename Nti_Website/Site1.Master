@@ -53,7 +53,7 @@
                     </div><!-- .site-branding -->
                 </div><!-- .col -->
 
-                <div class="col-2 col-lg-7 order-3 order-lg-2">
+                <div class="col-2 col-lg-9 order-3 order-lg-2">
                     <nav class="site-navigation">
                         <div class="hamburger-menu d-lg-none">
                             <span></span>
@@ -70,23 +70,19 @@
                             <li><a href="Anmalan.aspx">Anmälan</a></li>
                             <li><a href="Biljeter.aspx">Biljeter</a></li>
                             <li><a href="Projects.aspx">Nominerade</a></li>
-                            
                         </ul>
                     </nav><!-- .site-navigation -->
                 </div><!-- .col -->
-
-                <div class="col-lg-3 d-none d-lg-block order-2 order-lg-3">
-                <div class="buy-tickets">
-
-
+      <div style="display:none">
+           <asp:Button ID="btna" runat="server" OnClick="btna_Click" UseSubmitBehavior="false"/>
+      </div> 
+                      
+            </div><!-- .row -->
+                <div class="buy-tickets" style="float: right">
                  <asp:Panel runat="server" ID="pnl1">
-                                         <!-- Link to open the modal -->
-             <p><a  class="btn gradient-bg" id="showhide" onclick="showhide()" >Inloggning</a></p>
-
+             <p><a class="btn gradient-bg" id="showhide" onclick="showhide()"
+                 style="color: white">Inloggning</a></p>
                  </asp:Panel>
-
-
-
                     <asp:Panel runat="server" ID="pnl2">
                          <asp:Label ID="wlc" runat="server" CssClass="btn gradient-bg"></asp:Label>
 
@@ -95,21 +91,17 @@
                         </div>
                        
                     </asp:Panel>
-                   
-
-        
-  
-      <div style="display:none">
-           <asp:Button ID="btna" runat="server" OnClick="btna_Click" UseSubmitBehavior="false"/>
-      </div> 
-                      </div><!-- .Log In -->
-                </div><!-- .col -->
-            </div><!-- .row -->
+  </div>
+            <br />
+            <br />
+            <br />
                         <div id="login_content" class="CNT_IN" style="float:right">
                         <p> <b>Användarnamn:</b><asp:TextBox  CssClass="desgin" TextMode="SingleLine" OnFocus="this.style.borderColor='#9a24c1'" OnBlur="this.style.borderColor='black'"  ID="usr_box" runat="server" placeholder=" Username"></asp:TextBox></p>
   <p><b>Lösenord:</b>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<asp:TextBox  OnFocus="this.style.borderColor='#9a24c1'" OnBlur="this.style.borderColor='black'" TextMode="Password"  CssClass="desgin" ID="pass_box" runat="server" placeholder=" Password"></asp:TextBox></p>
- <p><input type="button" value="Logga in" class="Logbtn gradient-bg" onclick="Loginbtn()" 
+                            <center><div>
+                                 <p><input type="button" value="Logga in" class="Logbtn gradient-bg" onclick="Loginbtn()" 
       runat="server" id="btin"/></p>
+                            </div></center>
                     </div>
         </div><!-- .container-fluid -->
     </div><!-- .header-bar -->

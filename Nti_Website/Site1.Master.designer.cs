@@ -31,6 +31,15 @@ namespace Nti_Website {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
+        /// btna control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btna;
+        
+        /// <summary>
         /// pnl1 control.
         /// </summary>
         /// <remarks>
@@ -65,15 +74,6 @@ namespace Nti_Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button dash;
-        
-        /// <summary>
-        /// btna control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btna;
         
         /// <summary>
         /// usr_box control.
