@@ -1,9 +1,10 @@
-# Nti_Website
+# NTI_Website
 
- * En webbsida som skapades för NTI-gymnasiet i helsingborg.
- * Skolan kan genom sidan lägga upp bilder samt vido och information, om de som nomineras och vinner i evenemanget NTI-awards som sker varje år.
+## Projektbeskrivning
+NTI_Website är en dedikerad webbplats utvecklad för NTI-gymnasiet i Helsingborg. Denna plattform är designad för att skolan ska kunna publicera bilder, videoklipp och information inte bara om de elever som nomineras och vinner utan även om de nominerade studenternas projekt vid det årliga evenemanget NTI-awards. Detta ger en unik möjlighet att inte bara lyfta fram individuella prestationer utan också att visa upp de imponerande projekt som eleverna har arbetat med.
 
-Skapades av : 
-* Mohanad Oweidat
-* Osama Alnori
+## Skapare
+- Mohanad Oweidat
+- Osama Alnori
 
+Med NTI_Website får skolan en dynamisk plattform där elevernas framgångar och projekt kan presenteras för en bredare publik. Detta bidrar inte bara till att uppmärksamma elevernas hårt arbete utan skapar också en källa till inspiration och stolthet för hela skolgemenskapen.
